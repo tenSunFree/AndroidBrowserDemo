@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true">
+
+    <View
+        android:id="@+id/view_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view_add"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="24dp"
+        android:background="?attr/actionBarItemBackground"
+        android:src="@drawable/icon_fragment_main_all_pagination_add"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top_bar"
+        app:layout_constraintDimensionRatio="66:66"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_top_bar" />
+
+    <TextView
+        android:id="@+id/text_view_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_fragment_main_all_pagination_quantity"
+        android:text="2"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top_bar"
+        app:layout_constraintEnd_toStartOf="@+id/image_view_more"
+        app:layout_constraintTop_toTopOf="@+id/view_top_bar" />
+
+    <ImageView
+        android:id="@+id/image_view_more"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="24dp"
+        android:background="?attr/actionBarItemBackground"
+        android:src="@drawable/icon_fragment_main_all_pagination_more"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top_bar"
+        app:layout_constraintDimensionRatio="20:68"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_top_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_top_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
